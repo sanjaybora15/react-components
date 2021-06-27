@@ -1,0 +1,72 @@
+$primary: #B24242;
+$input-bg: #FBE8E8;
+$black: #000;
+$white: #fff;
+$grey: #555;
+$red: #FF0000;
+
+.counter-container {
+    .counter {
+        display: flex;
+        border-radius: 4px;
+        margin: 0;
+        & input[type=number] {
+            border-left: none;
+            border-right: none;
+            border-top: 1px solid $primary;
+            border-bottom: 1px solid $primary;
+            height: 56px;
+            width: 100%;
+            max-width: 60px;
+            text-align: center;
+            color: $primary;
+            font-weight: 700;
+            outline: none;
+            font-size: 21px;
+            background: $input-bg;
+            -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        .btn-increment, .btn-decrement {
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            border: 1px solid $primary;
+            cursor: pointer;
+            font-size: 21px;
+            outline: none;
+            &.btn-right {
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background: $primary;
+                color: $white;
+            }
+            &.btn-left {
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                background: $white;
+                color: $primary;
+
+            }
+            &:hover {
+                font-size: 25px;
+            }
+            &:active {
+                font-size: 21px;
+                opacity: .9;
+            }
+        }
+    }
+    .error-message {
+        margin: 0;
+        text-align: center;
+        font-size: 11px;
+        color: $red;
+        padding-top: 4px;
+    }
+}
